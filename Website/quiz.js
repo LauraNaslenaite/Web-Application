@@ -1,4 +1,4 @@
-document.getElementById("form1").onsubmit=function() {
+document.getElementById("footPrintPoll").onsubmit=function() {
 
 	   if(document.querySelector('input[name = "car"]:checked') &&  document.querySelector('input[name = "meat"]:checked') && document.querySelector('input[name = "recycle"]:checked') && document.querySelector('input[name = "paper"]:checked') && document.querySelector('input[name = "metal"]:checked') && document.querySelector('input[name = "energy"]:checked') && document.querySelector('input[name = "power"]:checked') && document.querySelector('input[name = "purchase"]:checked') && document.querySelector('input[name = "beauty"]:checked') && document.querySelector('input[name = "foodSource"]:checked')){
 
