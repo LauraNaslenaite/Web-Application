@@ -150,7 +150,44 @@
 
 </div>
 
-<script src="quiz.js" charset="utf-8"></script>
+<script>
+  document.getElementById("footPrintPoll").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission from refreshing the page
+    // Call a JavaScript function to handle the form submission
+    handlePollSubmission();
+  });
+
+  function handlePollSubmission(){
+    // Access the selected answer from the form
+    var answer = document.querySelector('input[name="answer"]:checked').value;
+
+    var car = document.querySelector('input[name = "car"]:checked').value;
+	  var meat = document.querySelector('input[name = "meat"]:checked').value;
+	  var recycle = document.querySelector('input[name = "recycle"]:checked').value;
+		var paper = document.querySelector('input[name = "paper"]:checked').value;
+		var metal = document.querySelector('input[name = "metal"]:checked').value;
+		var energy = document.querySelector('input[name = "energy"]:checked').value;
+		var beauty = document.querySelector('input[name = "beauty"]:checked').value;
+		var power = document.querySelector('input[name = "power"]:checked').value;
+		var purchase = document.querySelector('input[name = "purchase"]:checked').value;
+		var foodSource = document.querySelector('input[name = "foodSource"]:checked').value;
+	  var total = car + meat + recycle + paper + metal + energy + power + purchase + beauty + foodSource;
+    
+    // Do something with the selected answer
+    if(total < 11) {
+      console.log("You are environmentally friendly!");
+    }
+    if(total >=11 && total < 50) {
+      console.log("You look after the environment although there is still improvement to make! Try to recycle as much as you can, plastics, tin cans and scrap paper.");
+    }
+	  if(total >=50) {
+    console.log("You need to change your habits as you have a bad carbon footprint.");
+    }
+  }
+
+</script>
+
+<!-- <script src="quiz.js" charset="utf-8"></script> -->
 
 </body>
 </html>
