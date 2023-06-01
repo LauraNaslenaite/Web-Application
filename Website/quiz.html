@@ -29,26 +29,7 @@
                   <a class="dropdown-item" href="wasteManagement.html#map">Map</a>
                 </div>
               </li>
-              <li class="nav-item dropdown"><i class="fas fa-recycle"></i>
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Food
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Tips</a>
-                  <a class="dropdown-item" href="#">Map</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown"><i class="fas fa-recycle"></i>
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Lifestyles Choices
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Veganism</a>
-                  <a class="dropdown-item" href="#">Minimalism</a>
-                  <a class="dropdown-item" href="#">Zero-Waste</a>
-                  <a class="dropdown-item" href="#">Others</a>
-                </div>
-              </li>
+            
             </ul>
           </div>
         </nav>
@@ -60,134 +41,133 @@
       <div class="main-picture">
         <div class="container textblock">
           <div class="typewriter">
-            <h1 class="display-4 heading text-body" pt-10>How green are you?</h1>
+            <h1 class="display-4 heading text-body" pt-10 position="justify-content-center">How green are you?</h1>
+            <h3  id="answer"></h3>
+
           </div>
         </div>
       </div>
-    </header>
+</header>
 
-<form  id="footPrintPoll">
+<div class="container">
+  <main>
+    <div class="row justify-content-center">
+      <div class="col-sm-7 mt-4 ">
+
+<form id="quiz">
   <h2>How long are your travels by car every week?</h2>
-<label><input type="radio" name="car" id="noCar" value="1" />I don't travel by car</label>
-<label><input type="radio" name="car" id="little" value="2" /> Under 2 hours.</label>
-<label><input type="radio" name="car" id="medium" value="3" />2-5 hours.</label>
-<label><input type="radio" name="car" id="long" value="4" />5-15 hours.</label>
-<label><input type="radio" name="car" id="veryLong" value="5" />15+ hours.</label>
+  <div class=" justify-content-center">
+  <input type="radio" name="car" id="noCar" value="1" required="required"> I don't travel by car. <br>
+  <input type="radio" name="car" id="little" value="2" > Under 2 hours. <br>
+  <input type="radio" name="car" id="medium" value="3" > 2-5 hours. <br>
+  <input type="radio" name="car" id="long" value="4" > 5-15 hours. <br>
+  <input type="radio" name="car" id="veryLong" value="5"> 15+ hours. <br>
+  </div>
+  <h2>How much meat do you eat?</h2>
+  <input type="radio" name="meat" id="veg" value="1" required="required"/>I don't eat any meat.<br>
+  <input type="radio" name="meat" id="noBeef" value="2" />I only eat certain meats (No beef, no pork etc.)<br>
+  <input type="radio"  name="meat" id="occasion" value="3" />I eat meat on occasion.<br>
+  <input type="radio"  name="meat" id="frequent" value="4" />I eat meat frequently.<br>
+  <input type="radio"  name="meat" id="constant" value="5" />I eat meat all the time!<br>
 
-<h2>How much meat do you eat?</h2>
-<label><input type="radio" name="meat" id="veg" value="1" />I don't eat any meat.</label>
-<label><input type="radio" name="meat" id="noBeef" value="2" />I only eat certain meats (No beef, no pork etc.)</label>
-<label><input type="radio"  name="meat" id="occasion" value="3" />I eat meat on occasion.</label>
-<label><input type="radio"  name="meat" id="frequent" value="4" />I eat meat frequently.</label>
-<label><input type="radio"  name="meat" id="constant" value="5" />I eat meat all the time!</label>
+  <h2>Do you recycle any plastics?</h2>
+  <input type="radio" name="plastic" id="allPlastic" value="1" required="required" />Yes! I recycle plastics that I don't need and reuse my containers <br>
+  <input type="radio" name="plastic" id="mostPlastic" value="2" />I recycle most of my plastics and reuse containers <br>
+  <input type="radio" name="plastic" id="somePlastic" value="3" />I recycle some plastics but don't reuse containers <br>
+  <input type="radio"  name="plastic" id="rarePlastic" value="4" />I recycle plastics very rarely. <br>
+  <input type="radio"  name="plastic" id="noPlastic" value="5" />I don't recycle any plastics <br>
 
-<h2>Do you recycle any plastics?</h2>
-<label><input type="radio" name="plastic" id="allPlastic" value="1" />Yes! I recycle plastics that I don't need and reuse my containers</label>
-<label><input type="radio" name="plastic" id="mostPlastic" value="2" />I recycle most of my plastics and reuse containers</label>
-<label><input type="radio" name="plastic" id="somePlastic" value="3" />I recycle some plastics but don't reuse containers</label>
-<label><input type="radio"  name="plastic" id="rarePlastic" value="4" />I recycle plastics very rarely.</label>
-<label><input type="radio"  name="plastic" id="noPlastic" value="5" />I don't recycle any plastics</label>
+  <h2>Do you recycle paper?</h2>
+  <input type="radio" name="paper" id="allPaper" value="1" required="required"/>I recycle all my paper. <br>
+  <input type="radio" name="paper" id="mostPaper" value="2" />I recycle most of my paper. <br>
+  <input type="radio" name="paper" id="somePaper" value="3" />I recycle some of my paper. <br>
+  <input type="radio" name="paper" id="rarePaper" value="4" />I rarely recycle paper. <br>
+  <input type="radio" name="paper" id="noPaper" value="5" />I don't recycle paper. <br>
 
-<h2>Do you recycle paper?</h2>
-<label><input type="radio" name="paper" id="allPaper" value="1" />I recycle all my paper.</label>
-<label><input type="radio" name="paper" id="mostPaper" value="2" />I recycle most of my paper.</label>
-<label><input type="radio" name="paper" id="somePaper" value="3" />I recycle some of my paper.</label>
-<label><input type="radio" name="paper" id="rarePaper" value="4" />I rarely recycle paper.</label>
-<label><input type="radio" name="paper" id="noPaper" value="5" />I don't recycle paper.</label>
+  <h2>Do you recycle any metals?</h2>
+  <input type="radio" name="metal" id="allMetal" value="1" required="required" />Yes, I recycle anything with metal. <br>
+  <input type="radio" name="metal" id="mostMetal" value="2" />I recycle most metals. <br>
+  <input type="radio" name="metal" id="someMetal" value="3" />I recycle some of my metals. <br>
+  <input type="radio" name="metal" id="rareMetal" value="4" />I rarely recycle metals. <br>
+  <input type="radio" name="metal" id="noMetal" value="5" />I never recycle metals. <br>
 
-<h2>Do you recycle any metals?</h2>
-<label><input type="radio" name="metal" id="allMetal" value="1" />Yes, I recycle anything with metal.</label>
-<label><input type="radio" name="metal" id="mostMetal" value="2" />I recycle most metals.</label>
-<label><input type="radio" name="metal" id="someMetal" value="3" />I recycle some of my metals.</label>
-<label><input type="radio" name="metal" id="rareMetal" value="4" />I rarely recycle metals.</label>
-<label><input type="radio" name="metal" id="noMetal" value="5" />I never recycle metals.</label>
+  <h2>How many of your appliances are energy efficient? (Light bulbs, computer monitors etc.)</h2>
+  <input type="radio" name="energy" id="allEnergy" value="1" required="required"/>I try to have everything energy efficient! <br>
+  <input type="radio" name="energy" id="mostEnergy" value="2" />Most of my appliances are energy efficient. <br>
+  <input type="radio" name="energy" id="someEnergy" value="3" />Some of my appliances are energy efficient. <br>
+  <input type="radio" name="energy" id="rareEnergy" value="4" />Barely any of my appliances are energy efficient. <br>
+  <input type="radio" name="energy" id="noEnergy" value="5" />None of my appliances are energy efficient. <br>
 
-<h2>How many of your appliances are energy efficient? (Light bulbs, computer monitors etc.)</h2>
-<label><input type="radio" name="energy" id="allEnergy" value="1" />I try to have everything energy efficient!</label>
-<label><input type="radio" name="energy" id="mostEnergy" value="2" />Most of my appliances are energy efficient.</label>
-<label><input type="radio" name="energy" id="someEnergy" value="3" />Some of my appliances are energy efficient.</label>
-<label><input type="radio" name="energy" id="rareEnergy" value="4" />Barely any of my appliances are energy efficient.</label>
-<label><input type="radio" name="energy" id="noEnergy" value="5" />None of my appliances are energy efficient.</label>
+  <h2>Do you turn appliances (including light bulbs) off, put on standby or leave turned on?</h2>
+  <input type="radio" name="power" id="allOff" value="1" required="required"/>I turn off all my appliances when I am finished with them! <br>
+  <input type="radio" name="power" id="mostOff" value="2" />I turn off most of my appliances but put a few on standby. <br>
+  <input type="radio" name="power" id="fewOff" value="3" />I leave my things on standby with a few turned off. <br>
+  <input type="radio" name="power" id="standby" value="4" />I leave things on standby and some left turned on. <br>
+  <input type="radio" name="power" id="allOn" value="5" />I keep appliances turned on a lot! <br>
 
-<h2>Do you turn appliances (including light bulbs) off, put on standby or leave turned on?</h2>
-<label><input type="radio" name="power" id="allOff" value="1" />I turn off all my appliances when I am finished with them!</label>
-<label><input type="radio" name="power" id="mostOff" value="2" />I turn off most of my appliances but put a few on standby.</label>
-<label><input type="radio" name="power" id="fewOff" value="3" />I leave my things on standby with a few turned off.</label>
-<label><input type="radio" name="power" id="standby" value="4" />I leave things on standby and some left turned on.</label>
-<label><input type="radio" name="power" id="allOn" value="5" />I keep appliances turned on a lot!</label>
+  <h2>Do you buy everything new, buy secondhand or recycle what you have?</h2>
+  <input type="radio" name="purchase" id="goodPurchase" value="1" required="required"/>I keep what I have and I try to buy things used! I also recycle what I need to get rid of. <br>
+  <input type="radio" name="purchase" id="mostPurchase" value="2" />I like to buy new things but I still buy secondhand and try not to throw away what I own. <br>
+  <input type="radio" name="purchase" id="mediumPurchase" value="3" />I buy new and old things, throw away what I have sometimes. <br>
+  <input type="radio" name="purchase" id="rarePurchase" value="4" />I mostly buy new things and rarely buy secondhand, throw away most things <br>
+  <input type="radio" name="purchase" id="newPurchase" value="5" />I buy everything new and throw away what I don't need anymore <br>
 
-<h2>Do you buy everything new, buy secondhand or recycle what you have?</h2>
-<label><input type="radio" name="purchase" id="goodPurchase" value="1" />I keep what I have and I try to buy things used! I also recycle what I need to get rid of.</label>
-<label><input type="radio" name="purchase" id="mostPurchase" value="2" />I like to buy new things but I still buy secondhand and try not to throw away what I own.</label>
-<label><input type="radio" name="purchase" id="mediumPurchase" value="3" />I buy new and old things, throw away what I have sometimes.</label>
-<label><input type="radio" name="purchase" id="rarePurchase" value="4" />I mostly buy new things and rarely buy secondhand, throw away most things</label>
-<label><input type="radio" name="purchase" id="newPurchase" value="5" />I buy everything new and throw away what I don't need anymore</label>
+  <h2>How much do you spend on beauty products and grooming? (Haircuts, perfume, shampoo etc.)</h2>
+  <input type="radio" name="beauty" id="veryCheap" value="1" required="required"/>£0-£10 <br>
+  <input type="radio" name="beauty" id="cheap" value="2" />£11-£20 <br>
+  <input type="radio" name="beauty" id="medium" value="3" />£21-£40 <br>
+  <input type="radio" name="beauty" id="moreMoney" value="4" />£41-£50 <br>
+  <input type="radio" name="beauty" id="mostMoney" value="5" />£50+ <br>
 
-<h2>How much do you spend on beauty products and grooming? (Haircuts, perfume, shampoo etc.)</h2>
-<label><input type="radio" name="beauty" id="veryCheap" value="1" />£0-£10</label>
-<label><input type="radio" name="beauty" id="cheap" value="2" />£11-£20</label>
-<label><input type="radio" name="beauty" id="medium" value="3" />£21-£40</label>
-<label><input type="radio" name="beauty" id="moreMoney" value="4" />£41-£50</label>
-<label><input type="radio" name="beauty" id="mostMoney" value="5" />£50+</label>
+  <h2>Where does your food come from?</h2>
+  <input type="radio" name="foodSource" id="local" value="1" required="required"/>My food is locally sourced! <br>
+  <input type="radio" name="foodSource" id="mostLocal" value="2" />Most of my food is locally sourced. <br>
+  <input type="radio" name="foodSource" id="someLocal" value="3" />Some of my food is locally sourced. <br>
+  <input type="radio" name="foodSource" id="littleLocal" value="4" />Most of my food is not locally sourced <br>
+  <input type="radio" name="foodSource" id="noLocal" value="5" />All of my food comes from other parts of the world. <br>
 
-<h2>Where does your food come from?</h2>
-<label><input type="radio" name="foodSource" id="local" value="1" />My food is locally sourced!</label>
-<label><input type="radio" name="foodSource" id="mostLocal" value="2" />Most of my food is locally sourced.</label>
-<label><input type="radio" name="foodSource" id="someLocal" value="3" />Some of my food is locally sourced.</label>
-<label><input type="radio" name="foodSource" id="littleLocal" value="4" />Most of my food is not locally sourced</label>
-<label><input type="radio" name="foodSource" id="noLocal" value="5" />All of my food comes from other parts of the world.</label>
-
-
-
-
-<input type="submit" id="submit" value="Submit">Submit</input>
-
+  <button type="submit" id="sub"  class="btn btn-success" onclick="result()">Submit</button>
 </form>
 
-<p id="answer"></p>
-<p id="answer2"></p>
-
-
 </div>
-
+</main>
 <script>
-  document.getElementById("footPrintPoll").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent form submission from refreshing the page
-    // Call a JavaScript function to handle the form submission
-    handlePollSubmission();
-  });
-
-  function handlePollSubmission(){
-    // Access the selected answer from the form
-    var answer = document.querySelector('input[name="answer"]:checked').value;
-
-    var car = document.querySelector('input[name = "car"]:checked').value;
-	  var meat = document.querySelector('input[name = "meat"]:checked').value;
-	  var recycle = document.querySelector('input[name = "recycle"]:checked').value;
-		var paper = document.querySelector('input[name = "paper"]:checked').value;
-		var metal = document.querySelector('input[name = "metal"]:checked').value;
-		var energy = document.querySelector('input[name = "energy"]:checked').value;
-		var beauty = document.querySelector('input[name = "beauty"]:checked').value;
-		var power = document.querySelector('input[name = "power"]:checked').value;
-		var purchase = document.querySelector('input[name = "purchase"]:checked').value;
-		var foodSource = document.querySelector('input[name = "foodSource"]:checked').value;
-	  var total = car + meat + recycle + paper + metal + energy + power + purchase + beauty + foodSource;
+  function result() {
+    event.preventDefault();
+    var form = document.getElementById('quiz');
+    var formData = new FormData(form);
+    var score = 0;
+    var counter = 0;
+    for (var pair of formData.entries()) {
+        var question = pair[0];
+        var answer = parseInt(pair[1]);
+        score=score+answer;
+        counter = counter +1
+      }
+    console.log(counter)
+    console.log(score)
+     if(counter != 10)
+     {
+       alert("Not all questions answered!")
+     }
+    else{
+      var heading = document.getElementById('answer');
+      if(score < 11) {
+        heading.textContent  = 'You are environmentally friendly!';      
+      }
+      if(score >=11 && score < 50) {
+        heading.textContent  = "You look after the environment although there is still improvement to make! Try to recycle as much as you can, plastics, tin cans and scrap paper.";      
+      }
+      if(score >=50) {
+        heading.textContent  = "You need to change your habits as you have a bad carbon footprint.";     
+      }
+      window.scrollTo(0, 0);
     
-    // Do something with the selected answer
-    if(total < 11) {
-      console.log("You are environmentally friendly!");
-    }
-    if(total >=11 && total < 50) {
-      console.log("You look after the environment although there is still improvement to make! Try to recycle as much as you can, plastics, tin cans and scrap paper.");
-    }
-	  if(total >=50) {
-    console.log("You need to change your habits as you have a bad carbon footprint.");
     }
   }
-
 </script>
 
-<!-- <script src="quiz.js" charset="utf-8"></script> -->
+<footer  class="bg-light "><p>Text taken from <a href=" https://www.countryfile.com/how-to/how-to-live-a-greener-life/"> Country File </a></p></footer>
 
 </body>
 </html>
